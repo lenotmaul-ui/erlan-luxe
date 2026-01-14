@@ -26,15 +26,13 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    
-    /* Menggabungkan Overlay Gelap dan Gambar agar Teks Terbaca Jelas */
+    /* Menggabungkan Overlay Gelap (60%) agar teks putih tetap terbaca jelas */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                       url('1000081480.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 .blob-red {
     position: absolute; border-radius: 50%;
@@ -209,4 +207,5 @@ html {
     -webkit-overflow-scrolling: touch;
 
 }
+
 
