@@ -9,8 +9,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="aether-bg"></div> 
-    
+    <div class="aether-bg"></div>
+
+    <div class="blob-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none;">
+        <div class="blob-red one"></div>
+        <div class="blob-red two"></div>
+        <div class="blob-red three"></div>
+    </div>
+
     <main class="master-container">
         <div class="aether-glass">
             
@@ -36,34 +42,35 @@
                 </div>
             </section>
 
-<nav class="prestige-links">
-    <a href="https://www.instagram.com/lannnaaaa209?igsh=eDRyZ3hweDltYzc4" class="p-link ig">
-        <span class="link-circle"><i class="fab fa-instagram"></i></span>
-        <span class="link-name">INSTAGRAM</span>
-        <span class="link-action">FOLLOW</span>
-    </a>
-    <a href="https://www.tiktok.com/@erl4nnn2?is_from_webapp=1&sender_device=pc" class="p-link tk">
-        <span class="link-circle"><i class="fab fa-tiktok"></i></span>
-        <span class="link-name">TIKTOK</span>
-        <span class="link-action">WATCH</span>
-    </a>
-    <a href="https://wa.me/6282241391981" class="p-link wa">
-        <span class="link-circle"><i class="fab fa-whatsapp"></i></span>
-        <span class="link-name">WHATSAPP</span>
-        <span class="link-action">MESSAGE</span>
-    </a>
-    <a href="https://discord.gg/7Z3Ytpmd" class="p-link dc">
-        <span class="link-circle"><i class="fab fa-discord"></i></span>
-        <span class="link-name">DISCORD</span>
-        <span class="link-action">JOIN</span>
-    </a>
-</nav>
+            <nav class="prestige-links">
+                <a href="https://www.instagram.com/lannnaaaa209?igsh=eDRyZ3hweDltYzc4" class="p-link ig">
+                    <span class="link-circle"><i class="fab fa-instagram"></i></span>
+                    <span class="link-name">INSTAGRAM</span>
+                    <span class="link-action">FOLLOW</span>
+                </a>
+                <a href="https://www.tiktok.com/@erl4nnn2?is_from_webapp=1&sender_device=pc" class="p-link tk">
+                    <span class="link-circle"><i class="fab fa-tiktok"></i></span>
+                    <span class="link-name">TIKTOK</span>
+                    <span class="link-action">WATCH</span>
+                </a>
+                <a href="https://wa.me/6282241391981" class="p-link wa">
+                    <span class="link-circle"><i class="fab fa-whatsapp"></i></span>
+                    <span class="link-name">WHATSAPP</span>
+                    <span class="link-action">MESSAGE</span>
+                </a>
+                <a href="https://discord.gg/7Z3Ytpmd" class="p-link dc">
+                    <span class="link-circle"><i class="fab fa-discord"></i></span>
+                    <span class="link-name">DISCORD</span>
+                    <span class="link-action">JOIN</span>
+                </a>
+            </nav>
 
             <footer class="footer-minimal">
                 <p>DEVELOPER MAULANA WAHID</p>
             </footer>
         </div>
     </main>
+
 <script>
     document.addEventListener('click', function (e) {
         const ripple = document.createElement('div');
@@ -79,9 +86,4 @@
     });
 </script>
 </body>
-
 </html>
-
-
-
-
