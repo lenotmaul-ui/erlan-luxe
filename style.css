@@ -459,35 +459,46 @@ body {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
 }
+/* Container untuk menjaga posisi */
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .typing-effect {
-  display: inline-block; /* Agar border menyesuaikan lebar teks */
-  overflow: hidden; /* Menyembunyikan teks yang belum "diketik" */
-  border-right: 3px solid #fff; /* Garis kursor di akhir teks */
-  white-space: nowrap; /* Mencegah teks turun ke baris baru */
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  
-  /* Jalankan animasi: typing (mengetik) dan blink (kursor berkedip) */
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret 0.75s step-end infinite;
+    font-family: 'Tenor Sans', sans-serif; /* Menggunakan font elegant */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #d4af37; /* Warna emas untuk kursor */
+    width: 0;
+    letter-spacing: 5px;
+    
+    /* Efek Gradasi Emas pada Teks */
+    background: linear-gradient(to right, #ffffff, #d4af37, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Efek Cahaya (Glow) */
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+
+    /* Animasi Utama */
+    animation: 
+        typing 4s steps(20, end) forwards,
+        blink-cursor .8s step-end infinite;
 }
 
 /* Animasi Mengetik */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
-/* Animasi Kursor Berkedip */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #fff; } /* Ubah warna #fff sesuai tema luxe kamu */
+/* Animasi Kursor Berkedip dengan Efek Fade */
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #d4af37; }
 }
-
-
-
-
-
-
-
