@@ -458,47 +458,78 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
-}
-/* Container untuk menjaga posisi */
-.typing-container {
+/* Container untuk menjaga agar tidak keluar dari panel */
+.premium-typing-box {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    overflow: hidden; /* Mengunci agar tidak bocor keluar */
+    padding: 10px 0;
 }
 
 .typing-effect {
-    font-family: 'Tenor Sans', sans-serif; /* Menggunakan font elegant */
-    color: #fff;
-    font-weight: bold;
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 6px;
+    position: relative;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #d4af37; /* Warna emas untuk kursor */
-    width: 0;
-    letter-spacing: 5px;
+    margin: 0 auto;
+    width: 0; /* Mulai dari 0 untuk animasi */
     
-    /* Efek Gradasi Emas pada Teks */
-    background: linear-gradient(to right, #ffffff, #d4af37, #ffffff);
+    /* Warna Emas Gradasi yang Mewah */
+    background: linear-gradient(
+        to right, 
+        #bf953f, 
+        #fcf6ba, 
+        #b38728, 
+        #fcf6ba, 
+        #aa771c
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
-    /* Efek Cahaya (Glow) */
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-
-    /* Animasi Utama */
+    /* Animasi Mengetik & Border Kursor */
+    border-right: 2px solid #fcf6ba;
     animation: 
-        typing 4s steps(20, end) forwards,
-        blink-cursor .8s step-end infinite;
+        typing-luxe 4s steps(20, end) forwards,
+        blink-luxe 0.8s step-end infinite;
+    
+    /* Efek Bayangan Premium */
+    filter: drop-shadow(0 0 8px rgba(252, 246, 186, 0.3));
 }
 
-/* Animasi Mengetik */
-@keyframes typing {
+/* Animasi Inti */
+@keyframes typing-luxe {
     from { width: 0; }
-    to { width: 100%; }
+    to { width: 100%; max-width: fit-content; } /* Mengunci ukuran sesuai teks */
 }
 
-/* Animasi Kursor Berkedip dengan Efek Fade */
-@keyframes blink-cursor {
-    from, to { border-color: transparent; }
-    50% { border-color: #d4af37; }
+/* Animasi Kursor Mewah (Fade) */
+@keyframes blink-luxe {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #fcf6ba; }
+}
+
+/* Tambahan: Efek Pantulan Cahaya yang Bergerak di Atas Teks */
+.typing-effect::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: shine-luxe 3s infinite 4s; /* Jalan setelah selesai mengetik */
+}
+
+@keyframes shine-luxe {
+    to { left: 100%; }
 }
