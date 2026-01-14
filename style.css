@@ -533,3 +533,65 @@ body {
 @keyframes shine-luxe {
     to { left: 100%; }
 }
+/* Container Utama */
+.typing-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.premium-text {
+    display: inline-block;
+    font-family: 'Tenor Sans', sans-serif !important;
+    font-size: 2.5rem !important; /* Sesuaikan ukuran */
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 4px !important;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Mulai dari nol */
+    
+    /* Warna Emas Berkilau (Gold Chrome Effect) */
+    background: linear-gradient(
+        90deg, 
+        #8a642a, 
+        #d4af37, 
+        #fcf6ba, 
+        #d4af37, 
+        #8a642a
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Border Kursor Emas */
+    border-right: 3px solid #d4af37;
+    
+    /* Jalankan Animasi */
+    animation: 
+        typing-main 3.5s steps(15, end) forwards,
+        cursor-blink 0.8s step-end infinite,
+        gold-flow 5s linear infinite;
+    
+    /* Agar tidak pecah di mobile */
+    max-width: 90vw; 
+}
+
+/* Animasi 1: Mengetik */
+@keyframes typing-main {
+    from { width: 0; }
+    to { width: 10.5em; } /* Sesuaikan angka ini agar pas dengan panjang nama */
+}
+
+/* Animasi 2: Kursor Berkedip */
+@keyframes cursor-blink {
+    50% { border-color: transparent; }
+}
+
+/* Animasi 3: Efek Cahaya Emas Mengalir */
+@keyframes gold-flow {
+    to { background-position: 200% center; }
+}
