@@ -18,7 +18,7 @@ body {
     justify-content: center;
 }
 
-/* Background Liquid Blobs */
+/* GANTI BAGIAN INI DI CSS ANDA */
 .aether-bg {
     position: fixed;
     top: 0;
@@ -27,14 +27,13 @@ body {
     height: 100%;
     z-index: -1;
     
-    /* Tambahkan kode ini */
-    background-image: url('https://photos.app.goo.gl/9SUsYwdbGcLuZ9Xz6'); /* Ganti dengan nama file Anda */
-    background-size: cover;    /* Supaya foto memenuhi layar */
-    background-position: center; /* Supaya foto tetap di tengah */
+    /* Menggabungkan Overlay Gelap dan Gambar agar Teks Terbaca Jelas */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                      url('1000081480.jpg'); 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
-
-background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://photos.app.goo.gl/9SUsYwdbGcLuZ9Xz6');
 
 
 .blob-red {
@@ -210,3 +209,4 @@ html {
     -webkit-overflow-scrolling: touch;
 
 }
+
